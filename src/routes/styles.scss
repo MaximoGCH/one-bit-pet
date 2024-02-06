@@ -1,0 +1,49 @@
+:root {
+	--color-1: #ffffff;
+	--color-2: #000000;
+	--pixel-size: min(0.14vw, 0.24vh);
+}
+
+@font-face {
+	font-family: 'HelvetiPixel';
+	src: url('/HelvetiPixel.ttf');
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	background-color: var(--color-2);
+	user-select: none;
+}
+
+* {
+	font-family: 'HelvetiPixel';
+	font-weight: normal;
+	color: var(--color-1);
+	box-sizing: border-box;
+	font-size: pixels(16);
+}
+
+img {
+	display: block;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: pixels(8);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #fff;
+	border: solid pixels(2) #000;
+}
